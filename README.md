@@ -49,6 +49,29 @@ You now may connect to the database.
 
 ![H2 Console](docs/h2-console.png)
 
+To stop the container use `Ctrl+C`. Following is a summary.
+
+```bash
+[INFO] --------------------------------[ pom ]---------------------------------
+[INFO]
+[INFO] --- maven-dependency-plugin:2.8:copy (copy) @ h2-docker ---
+[INFO] Configured Artifact: com.h2database:h2:1.4.200:jar
+[INFO] com.h2database:h2:1.4.200:jar already exists in .../h2-docker/src/main/docker
+[INFO]
+[INFO] --- docker-maven-plugin:0.36.0:build (default-cli) @ h2-docker ---
+[INFO] Building tar: .../docker-build.tar
+[INFO] DOCKER> [h2-docker:latest] "dockerfile": Created docker-build.tar in 63 milliseconds
+[INFO] DOCKER> [h2-docker:latest] "dockerfile": Built image sha256:5a28c
+[INFO]
+[INFO] --- docker-maven-plugin:0.36.0:run (default-cli) @ h2-docker ---
+[INFO] DOCKER> [h2-docker:latest] "dockerfile": Start container 9fbb28e27abe
+dockerfile> Web Console server running at http://172.17.0.2:8082 (others can connect)
+dockerfile> Failed to start a browser to open the URL http://172.17.0.2:8082: Browser detection failed, and java property 'h2.browser' and environment variable BROWSER are not set to a browser executable.
+dockerfile> TCP server running at tcp://172.17.0.2:9092 (only local connections)
+dockerfile> PG server running at pg://172.17.0.2:5435 (only local connections)
+[INFO] DOCKER> [h2-docker:latest] "dockerfile": Stop and removed container 9fbb28e27abe after 0 ms
+```
+
 ## References
 
 1. [H2 Console](https://www.h2database.com/javadoc/org/h2/tools/Console.html?highlight=console&search=console)
