@@ -14,7 +14,7 @@ This will build and run a Docker container that holds H2. Open a browser and nav
 
 ![Login](docs/h2-console-login.png)
 
-The project does not actually create a database but you may do so by attaching to the container and executing the H2 shell to do so.
+The project does not actually create a database but you may create one by attaching to the container and executing the H2 shell to do so.
 
 ```bash
 docker exec -it h2-docker-1 bash
